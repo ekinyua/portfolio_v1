@@ -83,6 +83,9 @@ nav{
     width: 208px;
     height: 40px;
     margin-top: 10px;
+    border-radius: 10px;
+    font-size: medium;
+    font-weight: 500;
 }
 
 .card{
@@ -102,6 +105,8 @@ nav{
     justify-content: space-between;
     margin: auto;
     margin-top: 10px;
+    overflow: auto;
+    text-align: left;
 }
 
 .card-content{
@@ -170,6 +175,9 @@ h4{
 
 /* Add media query for tablets */
 @media (max-width: 830px) {
+    .body{
+        font-size: medium;
+    }
     .wrapper {
         padding-left: 20px;
         padding-right: 20px;
@@ -179,6 +187,15 @@ h4{
         flex-direction: column-reverse;
         height: auto;
         width: 100%;
+        font-size: medium;
+    }
+
+    .intro-text > h1{
+        font-size: larger;
+    }
+
+    .intro > img{
+        max-width: 50%;
     }
 
     .profile {
@@ -192,13 +209,33 @@ h4{
         text-align: center;
     }
 
+    .wrap-card{
+        max-width: 90vw;
+        overflow-x: auto;
+        margin: auto;
+        margin-top: 10px;
+        overflow: auto;
+        text-align: left;
+
+    }
+
+    .card-content > h4{
+        font-size:larger;
+    }
+
     .box-1, .box-2, .box-3{
         flex-direction: column;
-        text-align: left;
+        text-align: center;
+        font-size: medium;
+    }
+
+    .box-1 > img, .box-2 > img, .box-3 > img{
+        max-width: 100%;
+        align-self: center;
     }
 
     #resume {
-        width: 100%;
+        width: 70%;
     }
 
     .card {
@@ -228,11 +265,17 @@ h4{
     .responsive-nav{
         display: flex;
         flex-direction: row;
-    
+        font-size: small;
     }
 
     .box-1, .box-2, .box-3{
         flex-direction: column;
+        text-align: center;
+    }
+
+    .box-1 > img, .box-2 > img, .box-3 > img{
+        max-width: 80%;
+        align-self: center;
     }
 
     .wrap-card{
@@ -254,10 +297,31 @@ h4{
         max-width: 200px;
     }
 
-    .intro-text{
+    .intro-text, p{
         font-size:small;
     }
 
+    .intro-text > h1, .card-content > h4, .par-box > h4{
+        font-size: medium;
+    }
+
+    .icons > li > a > img{
+        margin: 10px;
+        max-width: 20px;
+    }
+
+    #resume{
+        max-width: 50%;
+        font-size: small;
+        font-weight: 600;
+        padding: 1px;
+    }
+
+    .social-icons{
+        align-items: left;
+        align-self: left;
+        justify-self: left;
+    }
     /* .nav-items{
         display: block;
     }
